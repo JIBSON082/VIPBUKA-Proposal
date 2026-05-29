@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VIP Buka — Premium Restaurant Web Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --dark:    #0d110e;
+    --deep:    #111411;
+    --forest:  #181f19;
+    --green:   #2A6B3C;
+    --green2:  #1e5030;
+    --orange:  #E8900A;
+    --orange2: #c97808;
+    --cream:   #F9F6F1;
+    --cream2:  #ede8e0;
+    --muted:   rgba(249,246,241,0.45);
+    --border:  rgba(42,107,60,0.2);
+    --border2: rgba(42,107,60,0.35);
+    --page-bg: #0a0d0b;
+    --fh: 'Playfair Display', serif;
+    --fb: 'DM Sans', sans-serif;
+    --sh: 0 8px 48px rgba(0,0,0,0.55);
+    --sc: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  body {
+    font-family: var(--fb);
+    background: var(--page-bg);
+    color: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Document ── */
+  .doc {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 52px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ── Page ── */
+  .page {
+    background: var(--forest);
+    border-radius: 4px;
+    box-shadow: var(--sh);
+    padding: 64px 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 880px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--green));
+  }
+
+  /* ── Page Footer ── */
+  .pf {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+  }
+  .pf-left { display: flex; flex-direction: column; gap: 2px; }
+  .pf-co { font-size: 11px; font-weight: 600; color: var(--muted); font-family: var(--fb); }
+  .pf-ct { font-size: 10.5px; color: rgba(249,246,241,0.3); font-family: var(--fb); }
+  .pf-pg { font-family: var(--fh); font-size: 11px; font-weight: 700; color: var(--orange); white-space: nowrap; }
+
+  /* ── Logo ── */
+  .logo { display: flex; align-items: center; gap: 14px; margin-bottom: 52px; }
+  .logo-box {
+    width: 44px; height: 44px;
+    background: var(--dark);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--orange); flex-shrink: 0;
+    font-family: var(--fh); font-size: 18px; font-weight: 800;
+  }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-brand { font-family: var(--fh); font-size: 18px; font-weight: 800; color: var(--cream); letter-spacing: .5px; }
+  .logo-brand span { color: var(--orange); }
+  .logo-sub { font-family: var(--fb); font-size: 9.5px; font-weight: 500; color: var(--green); letter-spacing: 3px; text-transform: uppercase; margin-top: 4px; }
+
+  /* ── Section Heading ── */
+  .sh { margin-bottom: 32px; }
+  .sh-title { font-family: var(--fh); font-size: 26px; font-weight: 700; color: var(--cream); letter-spacing: -.3px; margin-bottom: 5px; }
+  .sh-sub { font-size: 13px; color: var(--orange); font-weight: 500; margin-bottom: 10px; font-family: var(--fb); }
+  .sh-bar { width: 44px; height: 2px; background: var(--orange); border-radius: 2px; }
+
+  /* ── Cover ── */
+  .cv-body { margin-bottom: 48px; }
+  .cv-title { font-family: var(--fh); font-size: 48px; font-weight: 800; line-height: 1.08; letter-spacing: -1px; margin-bottom: 20px; color: var(--cream); }
+  .cv-accent { color: var(--orange); font-style: italic; }
+  .cv-tag { font-size: 14px; color: var(--muted); padding-left: 14px; border-left: 3px solid var(--orange); font-style: italic; max-width: 440px; line-height: 1.7; font-family: var(--fh); }
+  .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 36px; }
+  .cv-block label { display: block; font-size: 9.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); font-weight: 700; font-family: var(--fb); margin-bottom: 8px; }
+  .meta-name { font-family: var(--fh); font-size: 15px; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
+  .meta-det { font-size: 13px; color: var(--muted); line-height: 1.9; font-family: var(--fb); }
+  .cv-div { border: none; border-top: 1px solid var(--border); margin-bottom: 32px; }
+  .cv-bot { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .cv-bot label { display: block; font-size: 9.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 600; font-family: var(--fb); margin-bottom: 6px; }
+  .cv-link { font-size: 13px; color: var(--orange); font-weight: 600; text-decoration: none; font-family: var(--fb); }
+  .cv-link:hover { text-decoration: underline; }
+  .cv-date { text-align: right; }
+  .cv-date-val { font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--cream); }
+
+  /* ── Quote ── */
+  .quote {
+    background: rgba(42,107,60,0.08);
+    border-left: 3px solid var(--orange);
+    padding: 20px 24px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 32px;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-family: var(--fh);
+  }
+  .quote-b { margin-top: 32px; margin-bottom: 0; }
+
+  /* ── Points ── */
+  .pts { display: flex; flex-direction: column; gap: 22px; margin-bottom: 32px; }
+  .pt { display: flex; align-items: flex-start; gap: 16px; }
+  .pt-ico {
+    width: 42px; height: 42px; border-radius: 8px;
+    background: rgba(42,107,60,0.15);
+    border: 1px solid var(--border);
+    color: var(--orange);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .pt-con h4 { font-family: var(--fh); font-size: 14px; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
+  .pt-con p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* ── Goal ── */
+  .goal {
+    background: var(--green2);
+    border: 1px solid var(--border2);
+    color: var(--cream);
+    padding: 28px 32px;
+    border-radius: 6px;
+  }
+  .goal h4 { font-family: var(--fb); font-size: 9.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+  .goal p { font-size: 13.5px; line-height: 1.8; color: var(--cream2); font-family: var(--fb); }
+
+  /* ── Live Link ── */
+  .live {
+    display: flex; align-items: center; gap: 12px;
+    background: rgba(42,107,60,0.1);
+    border: 1px solid var(--border);
+    padding: 14px 20px; border-radius: 6px; margin-bottom: 24px;
+  }
+  .live-ic { color: var(--orange); display: flex; align-items: center; }
+  .live-lbl { font-size: 13px; color: var(--muted); font-family: var(--fb); }
+  .live a { font-size: 13px; font-weight: 600; color: var(--orange); text-decoration: none; font-family: var(--fb); }
+  .live a:hover { text-decoration: underline; }
+
+  /* ── Mock Browser ── */
+  .mock { border: 1px solid var(--border2); border-radius: 10px; overflow: hidden; margin-bottom: 32px; }
+  .mock-bar { background: var(--dark); padding: 10px 16px; display: flex; align-items: center; gap: 6px; border-bottom: 1px solid var(--border); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .dr { background: #FF5F57; } .dy { background: #FEBC2E; } .dg { background: #28C840; }
+  .mock-url { font-size: 11px; color: rgba(249,246,241,0.3); margin-left: 10px; font-family: var(--fb); }
+  .mock-screen {
+    background: var(--deep);
+    height: 170px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px;
+  }
+  .rb {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(42,107,60,0.2);
+    border: 1px solid var(--border2);
+    color: var(--cream);
+    padding: 10px 22px; border-radius: 4px;
+    font-family: var(--fb); font-size: 13px; font-weight: 600;
+  }
+  .rb span { color: var(--orange); }
+  .mock-sub { font-size: 12px; color: var(--muted); font-family: var(--fb); }
+
+  /* ── Solution Cols ── */
+  .sol-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+  .col-h { font-family: var(--fh); font-size: 14px; font-weight: 700; color: var(--cream); margin-bottom: 16px; }
+  .obj-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .obj-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--muted); line-height: 1.55; font-family: var(--fb); }
+  .obj-chk {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(42,107,60,0.2);
+    border: 1px solid var(--border2);
+    color: var(--orange);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+  }
+  .sol-desc { display: flex; flex-direction: column; gap: 16px; }
+  .sol-desc p { font-size: 13.5px; color: var(--muted); line-height: 1.8; font-family: var(--fb); }
+
+  /* ── Features Grid ── */
+  .feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; flex: 1; }
+  .feat-card {
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 20px;
+    background: rgba(42,107,60,0.06);
+    transition: border-color 0.2s;
+  }
+  .feat-card:hover { border-color: var(--border2); }
+  .feat-ico {
+    width: 38px; height: 38px; border-radius: 7px;
+    background: rgba(42,107,60,0.15);
+    border: 1px solid var(--border);
+    color: var(--orange);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
+  }
+  .feat-title { font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+  .feat-desc { font-size: 12px; color: var(--muted); line-height: 1.6; font-family: var(--fb); }
+
+  /* ── Benefits Grid ── */
+  .ben-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; flex: 1; margin-bottom: 28px; }
+  .ben-card {
+    display: flex; align-items: flex-start; gap: 14px;
+    border: 1px solid var(--border); border-radius: 8px; padding: 18px;
+    background: rgba(42,107,60,0.06);
+  }
+  .ben-ico {
+    width: 38px; height: 38px; border-radius: 7px;
+    background: rgba(42,107,60,0.15);
+    border: 1px solid var(--border);
+    color: var(--orange);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .ben-title { font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--cream); margin-bottom: 5px; }
+  .ben-desc { font-size: 12px; color: var(--muted); line-height: 1.6; font-family: var(--fb); }
+
+  /* ── Investment ── */
+  .inv-card {
+    background: linear-gradient(135deg, #1a2e1d 0%, #0f1f11 100%);
+    border: 1px solid var(--border2);
+    border-radius: 10px; padding: 36px; margin-bottom: 20px;
+    position: relative; overflow: hidden;
+  }
+  .inv-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--orange), var(--green));
+  }
+  .inv-hdr { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; gap: 20px; }
+  .inv-t { font-family: var(--fh); font-size: 20px; font-weight: 800; margin-bottom: 4px; color: var(--cream); }
+  .inv-st { font-size: 13px; color: var(--muted); font-family: var(--fb); }
+  .inv-price { display: flex; flex-direction: column; align-items: flex-end; }
+  .pr-main { font-family: var(--fh); font-size: 52px; font-weight: 800; line-height: 1; letter-spacing: -2px; color: var(--orange); }
+  .pr-ngn { font-size: 15px; color: var(--muted); margin-top: 2px; font-family: var(--fb); }
+  .pr-lbl { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(249,246,241,0.3); margin-top: 2px; font-family: var(--fb); }
+  .inv-div { height: 1px; background: var(--border); margin-bottom: 24px; }
+  .inv-inc { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .inv-inc li { display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--cream2); font-family: var(--fb); }
+  .inv-chk {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: rgba(42,107,60,0.3);
+    border: 1px solid var(--border2);
+    color: var(--orange);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  /* ── Maintenance ── */
+  .mnt-card {
+    border: 1px solid var(--border2);
+    border-radius: 8px; padding: 28px; margin-bottom: 40px;
+    background: rgba(42,107,60,0.08);
+    position: relative; overflow: hidden;
+  }
+  .mnt-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--green);
+  }
+  .mnt-badge {
+    display: inline-flex; align-items: center;
+    background: var(--green); color: var(--cream);
+    font-size: 10px; font-family: var(--fb); font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 3px; margin-bottom: 14px;
+  }
+  .mnt-title { font-family: var(--fh); font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 18px; }
+  .mnt-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+  .mnt-list li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); font-weight: 500; font-family: var(--fb); }
+  .mnt-list li span { color: var(--orange); font-size: 18px; line-height: 1; font-weight: 700; }
+  .mnt-note { font-size: 12px; color: rgba(249,246,241,0.3); font-style: italic; font-family: var(--fb); }
+
+  /* ── Dev Block ── */
+  .dev { display: grid; grid-template-columns: 1fr 1fr; padding-top: 28px; border-top: 1px solid var(--border); }
+  .dev label { display: block; font-size: 9.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 600; font-family: var(--fb); margin-bottom: 6px; }
+  .dev-name { font-family: var(--fh); font-size: 17px; font-weight: 700; color: var(--cream); margin-bottom: 2px; }
+  .dev-role { font-size: 13px; color: var(--muted); font-family: var(--fb); }
+  .dev-r { text-align: right; }
+  .dev-r p { font-size: 13px; color: var(--muted); line-height: 1.9; font-family: var(--fb); }
+  .dev-r a { font-size: 13px; color: var(--orange); text-decoration: none; font-weight: 600; font-family: var(--fb); }
+  .dev-r a:hover { text-decoration: underline; }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .page { padding: 36px 24px; min-height: auto; }
+    .cv-title { font-size: 32px; }
+    .cv-grid, .cv-bot, .sol-cols, .feat-grid, .ben-grid, .inv-inc, .mnt-list, .dev { grid-template-columns: 1fr; }
+    .inv-hdr { flex-direction: column; }
+    .inv-price { align-items: flex-start; }
+    .dev-r, .cv-date { text-align: left; }
+    .pr-main { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <!-- ══ PAGE 1: COVER ══ -->
+  <div class="page">
+    <div class="logo">
+      <div class="logo-box">H</div>
+      <div class="logo-text">
+        <span class="logo-brand">VIP <span>BUKA</span></span>
+        <span class="logo-sub">Premium Nigerian Cuisine</span>
+      </div>
+    </div>
+
+    <div class="cv-body">
+      <h1 class="cv-title">Premium Restaurant<br><span class="cv-accent">Web Experience</span></h1>
+      <p class="cv-tag">Your Customers Are Hungry Online. Let's Make Sure They Find You First.</p>
+    </div>
+
+    <div class="cv-grid">
+      <div class="cv-block">
+        <label>PREPARED FOR</label>
+        <p class="meta-name">Akinyemi Olamilekan (HVIP)</p>
+        <p class="meta-det">VIP Buka</p>
+        <p class="meta-det">Lagos, Nigeria</p>
+      </div>
+      <div class="cv-block">
+        <label>PREPARED BY</label>
+        <p class="meta-name">David Ajibua</p>
+        <p class="meta-det">Web Developer</p>
+        <p class="meta-det">07068634125</p>
+        <p class="meta-det">davidajibua78@gmail.com</p>
+      </div>
+    </div>
+
+    <hr class="cv-div" />
+
+    <div class="cv-bot">
+      <div>
+        <label>LIVE WEBSITE</label>
+        <a href="https://vipbuka.vercel.app" class="cv-link">vipbuka.vercel.app</a>
+      </div>
+      <div class="cv-date">
+        <label>DATE</label>
+        <p class="cv-date-val">May 2026</p>
+      </div>
+    </div>
+
+    <div class="pf">
+      <div class="pf-left">
+        <span class="pf-co">&#169; 2026 VIP Buka. All rights reserved.</span>
+        <span class="pf-ct">07068634125 &middot; davidajibua78@gmail.com</span>
+      </div>
+      <span class="pf-pg">Page 1</span>
+    </div>
+  </div>
+
+  <!-- ══ PAGE 2: EXECUTIVE SUMMARY ══ -->
+  <div class="page">
+    <div class="sh">
+      <h2 class="sh-title">Executive Summary</h2>
+      <div class="sh-bar"></div>
+    </div>
+
+    <blockquote class="quote">
+      &#8220;In today&#8217;s food landscape, the first impression a restaurant makes is no longer at the entrance&#8212;it&#8217;s on a digital screen. Hungry customers search before they order.&#8221;
+    </blockquote>
+
+    <div class="pts">
+      <div class="pt">
+        <div class="pt-ico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="pt-con">
+          <h4>Digital-First Customer Discovery</h4>
+          <p>Today&#8217;s customers search online before choosing where to eat or order. A premium website ensures VIP Buka appears when hunger strikes and decisions are made.</p>
+        </div>
+      </div>
+      <div class="pt">
+        <div class="pt-ico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="pt-con">
+          <h4>24/7 Order Capture</h4>
+          <p>Your website works around the clock&#8212;showcasing your full menu, driving Chowdeck orders, and routing hungry customers to WhatsApp even outside operating hours.</p>
+        </div>
+      </div>
+      <div class="pt">
+        <div class="pt-ico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="pt-con">
+          <h4>Brand Credibility &amp; Trust</h4>
+          <p>A polished, luxurious online presence signals quality food and professionalism&#8212;giving new customers the confidence to order before they&#8217;ve even tasted the jollof.</p>
+        </div>
+      </div>
+      <div class="pt">
+        <div class="pt-ico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="pt-con">
+          <h4>Competitive Edge in Lagos</h4>
+          <p>Most local bukas and even mid-tier restaurants lack a compelling web presence. VIP Buka&#8217;s premium site positions it as the clear category leader in Nigerian cuisine online.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="goal">
+      <h4>THE GOAL</h4>
+      <p>This proposal presents a fully-built premium website for VIP Buka&#8212;designed to attract more customers, showcase your full menu of authentic Nigerian dishes, and establish a trusted d
