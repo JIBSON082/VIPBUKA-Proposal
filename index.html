@@ -651,7 +651,7 @@
       <div class="sh-bar"></div>
     </div>
 
-    <div class="inv-card">
+   <div class="inv-card">
   <div class="inv-hdr">
     <div>
       <h3 class="inv-t">Website Development</h3>
@@ -667,61 +667,56 @@
   <div class="inv-div"></div>
 
   <!-- Invoice Table -->
-  <table style="width:100%; border-collapse: collapse; margin-bottom: 24px;">
-    <thead>
-      <tr style="border-bottom: 1px solid rgba(42,107,60,0.3);">
-        <th style="text-align:left; font-family: var(--fb); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,246,241,0.35); padding-bottom: 10px;">Item</th>
-        <th style="text-align:left; font-family: var(--fb); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,246,241,0.35); padding-bottom: 10px;">Description</th>
-        <th style="text-align:center; font-family: var(--fb); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,246,241,0.35); padding-bottom: 10px;">Qty</th>
-        <th style="text-align:right; font-family: var(--fb); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,246,241,0.35); padding-bottom: 10px;">Price</th>
-        <th style="text-align:right; font-family: var(--fb); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,246,241,0.35); padding-bottom: 10px;">Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom: 1px solid rgba(42,107,60,0.15);">
-        <td style="font-family: var(--fb); font-size: 12px; color: rgba(249,246,241,0.5); padding: 14px 0;">01</td>
-        <td style="padding: 14px 0;">
-          <p style="font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--cream); margin-bottom: 2px;">UI/UX Design &amp; Branding</p>
-          <p style="font-family: var(--fb); font-size: 11px; color: rgba(249,246,241,0.4);">Visual design, brand identity, user experience</p>
-        </td>
-        <td style="text-align:center; font-family: var(--fb); font-size: 13px; color: rgba(249,246,241,0.55); padding: 14px 0;">1</td>
-        <td style="text-align:right; padding: 14px 0;">
-          <p style="font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--orange);">$145</p>
-          <p style="font-family: var(--fb); font-size: 11px; color: rgba(249,246,241,0.35);">&#8358;200,000</p>
-        </td>
-        <td style="text-align:right; padding: 14px 0;">
-          <p style="font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--orange);">$145</p>
-          <p style="font-family: var(--fb); font-size: 11px; color: rgba(249,246,241,0.35);">&#8358;200,000</p>
-        </td>
-      </tr>
-      <tr style="border-bottom: 1px solid rgba(42,107,60,0.15);">
-        <td style="font-family: var(--fb); font-size: 12px; color: rgba(249,246,241,0.5); padding: 14px 0;">02</td>
-        <td style="padding: 14px 0;">
-          <p style="font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--cream); margin-bottom: 2px;">Frontend Development</p>
-          <p style="font-family: var(--fb); font-size: 11px; color: rgba(249,246,241,0.4);">Full build, integrations &amp; deployment</p>
-        </td>
-        <td style="text-align:center; font-family: var(--fb); font-size: 13px; color: rgba(249,246,241,0.55); padding: 14px 0;">1</td>
-        <td style="text-align:right; padding: 14px 0;">
-          <p style="font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--orange);">$290</p>
-          <p style="font-family: var(--fb); font-size: 11px; color: rgba(249,246,241,0.35);">&#8358;400,000</p>
-        </td>
-        <td style="text-align:right; padding: 14px 0;">
-          <p style="font-family: var(--fh); font-size: 13px; font-weight: 700; color: var(--orange);">$290</p>
-          <p style="font-family: var(--fb); font-size: 11px; color: rgba(249,246,241,0.35);">&#8358;400,000</p>
-        </td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="3"></td>
-        <td style="text-align:right; padding-top: 16px; font-family: var(--fb); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(249,246,241,0.35);">Total</td>
-        <td style="text-align:right; padding-top: 16px;">
-          <p style="font-family: var(--fh); font-size: 20px; font-weight: 800; color: var(--orange);">$435</p>
-          <p style="font-family: var(--fb); font-size: 12px; color: rgba(249,246,241,0.45);">&#8358;600,000</p>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+  <div style="width:100%; margin-bottom: 24px;">
+
+    <!-- Header Row -->
+    <div style="display:grid; grid-template-columns: 28px 1fr 80px 90px; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+      <span style="font-family:var(--fb); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.25);">#</span>
+      <span style="font-family:var(--fb); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.25);">Description</span>
+      <span style="font-family:var(--fb); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.25); text-align:center;">Qty</span>
+      <span style="font-family:var(--fb); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.25); text-align:right;">Amount</span>
+    </div>
+
+    <!-- Row 01 -->
+    <div style="display:grid; grid-template-columns: 28px 1fr 80px 90px; gap: 12px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); align-items:start;">
+      <span style="font-family:var(--fb); font-size:11px; color:rgba(255,255,255,0.3); padding-top:2px;">01</span>
+      <div>
+        <p style="font-family:var(--fh); font-size:13px; font-weight:700; color:#F9F6F1; margin-bottom:3px;">UI/UX Design &amp; Branding</p>
+        <p style="font-family:var(--fb); font-size:11px; color:rgba(255,255,255,0.35); line-height:1.5;">Visual design, brand identity, user experience</p>
+      </div>
+      <p style="font-family:var(--fb); font-size:13px; color:rgba(255,255,255,0.45); text-align:center; padding-top:2px;">1</p>
+      <div style="text-align:right;">
+        <p style="font-family:var(--fh); font-size:13px; font-weight:700; color:#E8900A;">$145</p>
+        <p style="font-family:var(--fb); font-size:11px; color:rgba(255,255,255,0.3); margin-top:2px;">&#8358;200,000</p>
+      </div>
+    </div>
+
+    <!-- Row 02 -->
+    <div style="display:grid; grid-template-columns: 28px 1fr 80px 90px; gap: 12px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); align-items:start;">
+      <span style="font-family:var(--fb); font-size:11px; color:rgba(255,255,255,0.3); padding-top:2px;">02</span>
+      <div>
+        <p style="font-family:var(--fh); font-size:13px; font-weight:700; color:#F9F6F1; margin-bottom:3px;">Frontend Development</p>
+        <p style="font-family:var(--fb); font-size:11px; color:rgba(255,255,255,0.35); line-height:1.5;">Full build, integrations &amp; deployment</p>
+      </div>
+      <p style="font-family:var(--fb); font-size:13px; color:rgba(255,255,255,0.45); text-align:center; padding-top:2px;">1</p>
+      <div style="text-align:right;">
+        <p style="font-family:var(--fh); font-size:13px; font-weight:700; color:#E8900A;">$290</p>
+        <p style="font-family:var(--fb); font-size:11px; color:rgba(255,255,255,0.3); margin-top:2px;">&#8358;400,000</p>
+      </div>
+    </div>
+
+    <!-- Total Row -->
+    <div style="display:grid; grid-template-columns: 28px 1fr 80px 90px; gap: 12px; padding-top: 18px; align-items:center;">
+      <span></span>
+      <span></span>
+      <span style="font-family:var(--fb); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.25); text-align:center;">Total</span>
+      <div style="text-align:right;">
+        <p style="font-family:var(--fh); font-size:22px; font-weight:800; color:#E8900A; line-height:1;">$435</p>
+        <p style="font-family:var(--fb); font-size:12px; color:rgba(255,255,255,0.35); margin-top:3px;">&#8358;600,000</p>
+      </div>
+    </div>
+
+  </div>
 </div>
       <ul class="inv-inc">
         <li><span class="inv-chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Full Premium Restaurant Website</li>
